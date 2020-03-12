@@ -1,8 +1,6 @@
 import React from 'react';
 import Link from 'next/link'
 
-
-
 import { Container } from './styles/Header';
 
 export default function Header() {
