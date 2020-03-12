@@ -2,8 +2,8 @@ import React from 'react';
 
 // import { Container } from './styles';
 
-export default function Index() {
+export default function Servicos() {
   return (
-    <h2>quiera?</h2>
+    <h2>Magal Lindao</h2>
   );
 }

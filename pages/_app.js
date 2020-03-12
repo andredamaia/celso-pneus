@@ -1,9 +1,10 @@
 import React from 'react'
 import App from 'next/app'
-import Link from 'next/link'
 import NProgress from 'nprogress'
 import Router from 'next/router'
 import Head from 'next/head'
+import Header from '../components/Header'
+
 
 Router.events.on('routeChangeStart', url => {
   console.log(`Loading: ${url}`)
@@ -21,23 +22,9 @@ export default class MyApp extends App {
           {/* Import CSS for nprogress */}
           <link rel="stylesheet" type="text/css" href="/nprogress.css" />
         </Head>
-        <nav>
-          <style jsx>{`
-            a {
-              margin: 0 10px 0 0;
-            }
-          `}</style>
-          <Link href="/">
-            <a>Home</a>
-          </Link>
-          <Link href="/about">
-            <a>About</a>
-          </Link>
-          <Link href="/forever">
-            <a>Forever</a>
-          </Link>
-          <a href="/non-existing">Non Existing Page</a>
-        </nav>
+
+        <Header/>
+
         <Component {...pageProps} />
       </>
     )
