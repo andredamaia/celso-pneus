@@ -5,6 +5,8 @@ import Router from 'next/router'
 import Head from 'next/head'
 import Header from '../components/Header'
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 Router.events.on('routeChangeStart', url => {
   console.log(`Loading: ${url}`)
@@ -19,8 +21,9 @@ export default class MyApp extends App {
     return (
       <>
         <Head>
-          {/* Import CSS for nprogress */}
           <link rel="stylesheet" type="text/css" href="/nprogress.css" />
+          <link rel="stylesheet" type="text/css" href="/global.css" />
+          
         </Head>
 
         <Header/>

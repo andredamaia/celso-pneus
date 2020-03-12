@@ -1,14 +1,16 @@
 import React from 'react';
 import Link from 'next/link'
 
-// import { Container } from './styles';
+
+
+import { Container } from './styles/Header';
 
 export default function Header() {
   return (
-    <header>
+    <Container>
         <div className="container">
             <div className="row">
-                <div className="col-12 col-md-4">
+                <div className="col-12 col-md-4 text-green">
 
                 </div>
 
@@ -19,20 +21,27 @@ export default function Header() {
                             margin: 0 10px 0 0;
                             }
                         `}</style>
+
                         <Link href="/">
                             <a>Home</a>
                         </Link>
+
                         <Link href="/sobre">
                             <a>Sobre</a>
                         </Link>
+
                         <Link href="/servicos">
                             <a>Serviços</a>
                         </Link>
-                        <a href="/non-existing">Non Existing Page</a>
+
+                        <Link href="/contato">
+                            <a>Contato</a>
+                        </Link>
+
                     </nav>
                 </div>
             </div>
         </div>
-    </header>
+    </Container>
   );
 }
