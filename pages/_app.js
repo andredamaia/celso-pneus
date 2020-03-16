@@ -1,11 +1,12 @@
 import React from 'react'
-import App from 'next/app'
-import NProgress from 'nprogress'
-import Router from 'next/router'
-import Head from 'next/head'
-import Header from '../components/Header'
+import App from 'next/app';
+import NProgress from 'nprogress';
+import Router from 'next/router';
+import Head from 'next/head';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 Router.events.on('routeChangeStart', url => {
@@ -23,12 +24,13 @@ export default class MyApp extends App {
         <Head>
           <link rel="stylesheet" type="text/css" href="/nprogress.css" />
           <link rel="stylesheet" type="text/css" href="/global.css" />
-          
         </Head>
 
         <Header />
 
         <Component {...pageProps} />
+
+        <Footer />
       </>
     )
   }
